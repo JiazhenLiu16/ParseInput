@@ -1,0 +1,50 @@
+#include <stdio.h>      /* using printf, gets, BUFSIZ */
+
+/* 
+ * Lab: Beginner C Programming Practice (1b): ParseInput
+ *
+ * The ParseInput class will report to the user how many characters there are in the string, how many '0' characters there are in the array, and how many '1' characters there are in the array.
+ * Date: 2018/4/6
+ * Created by Jiazhen Liu
+*/
+
+
+
+/* The main function initiates execution of this program.*/
+int main()
+{
+    char input[BUFSIZ];
+    char *p;
+    p=input;
+    int lineNum;
+    int oneCount;
+    int zeroCount;
+    while ( gets(input) )   /* gets returns NULL at end-of-file */
+    {
+       for (p=input;*p!='\0';p++)
+{
+    lineNum++;
+}
+     printf("%i\n",lineNum); /* Report how many characters there are in the string. */
+    for (p=input;*p!='\0';p++)
+{
+    if (*p=='0')
+{
+    zeroCount++;
+}
+}
+    printf("%i\n",zeroCount); /* Report how many '0' characters there are in the array. */
+    for (p=input;*p!='\0';p++)
+{
+   if (*p=='1')
+{
+    oneCount++;
+}
+}
+    printf("%i\n",oneCount); /* Report how many '1' characters there are in the array. */
+    }
+}   
+}
+    }
+}
+
